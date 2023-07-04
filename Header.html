@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .logo {
+        height: 40px;
+        width: 40px;
+      }
+      .search_icon {
+        margin-left: 90px;
+        display: flex;
+        gap: 8px;
+      }
+      .Searchbox {
+        outline: none;
+        border: none;
+        border-radius: 6px;
+        background: transparent;
+      }
+      .allicons {
+        display: flex;
+        gap: 25px;
+      }
+      .imgprofile {
+        border-radius: 50%;
+        width: 20px;
+      }
+      .iconsizing {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+      }
+      body {
+        padding: 0px;
+        margin: 0px;
+        background-color: #f3f2ef;
+      }
+      .outer {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0px;
+        /* padding-bottom: 20px; */
+        /* border: solid 1px; */
+        border-bottom: solid silver 1px;
+        height: 38px;
+      }
+
+      .twocontents_wrp {
+        display: flex;
+        gap: 165px;
+      }
+      .iconcontent {
+        display: flex;
+        gap: 19px;
+      }
+      .icon_texting {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .text {
+        color: rgb(148, 127, 6);
+        text-decoration: underline;
+      }
+      .icontextlight {
+        font-weight: lighter;
+      }
+      .line {
+        border-left: 0.5px solid black;
+        height: 30px;
+      }
+      .search_input_icon {
+        display: flex;
+        align-items: center;
+        background-color: rgb(198, 217, 211);
+        width: 250px;
+        border-radius: 6px;
+        padding-left: 16px;
+      }
+
+      .sidebarleft {
+        flex-wrap: wrap;
+      }
+      .profilebar {
+        background-color: white;
+        margin: 45px;
+        margin-left: 90px;
+        width: 240px;
+        height: 380px;
+        border-radius: 10px;
+      }
+      .imagedec {
+        border-radius: 70px;
+        width: 70px;
+        height: 70px;
+      }
+      .profileinfo {
+        /* background-color: aqua; */
+        /* margin-top: 25px; */
+        padding-top: 23px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding-bottom: 15px;
+      }
+      .profileText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .designation {
+        font-size: 15px;
+        padding-left: 35px;
+      }
+      .Analytics {
+        padding: 15px;
+        border-bottom: silver solid 1px;
+      }
+      .ExclusiveTools {
+        padding: 15px;
+        border-bottom: silver solid 1px;
+      }
+      .ExclusiveToolsText {
+        font-size: 13px;
+        font-weight: lighter;
+      }
+      .Trypremium {
+        font-size: 13px;
+        text-decoration: underline;
+        font-weight: 900;
+      }
+      .Myitems {
+        padding: 15px;
+      }
+      .myItemsText {
+        padding-left: 5px;
+      }
+
+      .recentbar {
+        background-color: white;
+        height: 350px;
+        width: 240px;
+        margin-left: 90px;
+        border-radius: 10px;
+        position: sticky;
+        top: 10px;
+      }
+      .recent {
+        padding: 20px 0px;
+        padding-left: 10px;
+      }
+
+      .cloudcomputing {
+        padding-left: 10px;
+      }
+
+      .cloudtext {
+        padding-left: 10px;
+      }
+
+      .groups {
+        margin-top: 20px;
+        padding: 20px 0px;
+        padding-left: 10px;
+      }
+      .seeall {
+        padding: 20px 0px;
+        margin-left: 42px;
+      }
+      .events {
+        padding-left: 10px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 210px;
+      }
+
+      .followed {
+        padding-left: 10px;
+        margin-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: solid silver 1px;
+      }
+      .discover {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+      }
+      .event_text {
+        color: rgb(8, 114, 189);
+      }
+      .follow_text {
+        color: rgb(8, 114, 189);
+      }
+      .cloudtext {
+        font-weight: lighter;
+        font-size: 13px;
+        color: grey;
+      }
+      .seeall_text {
+        font-weight: lighter;
+        font-size: 13px;
+        color: grey;
+      }
+      .Newsbar {
+        background-color: white;
+        width: 282px;
+        height: 311px;
+        border-radius: 10px;
+        margin-left: 30px;
+        margin-top: 45px;
+      }
+      .Linkedin_news {
+        padding-top: 18px;
+        max-width: 255px;
+        padding-left: 13px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 13px;
+      }
+      .news_list {
+        padding-left: 25px;
+      }
+      .list_items {
+        padding: 0;
+        margin: 0;
+      }
+      .first_list {
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .list_text {
+        /* display: flex;
+                    flex-direction: column; */
+        padding-bottom: 10px;
+      }
+      .main_bar {
+        display: flex;
+        justify-content: space-around;
+      }
+      .center_text {
+        width: 50%;
+      }
+      .sidebar_right {
+        padding-right: 5rem;
+      }
+      .first_list_2 {
+        font-size: 12px;
+      }
+      .first_list {
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .showmore {
+        padding-left: 10%;
+        color: grey;
+      }
+      .profile_background {
+        background-color: #f3f2ef;
+      }
+      .profile_color {
+        background-color: aquamarine;
+        height: 30px;
+      }
+      .ad_bar {
+        padding-left: 30px;
+        margin-top: 45px;
+        top: 10px;
+      }
+      .img_ad {
+        border-radius: 10px;
+        width: 285px;
+      }
+      .options {
+        list-style-type: none;
+        font-size: 12px;
+        margin: 10px;
+        color: grey;
+        display: flex;
+        gap: 10px;
+      }
+      .options_list {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .optionbar {
+        margin-top: 30px;
+        margin-left: 30px;
+        max-width: 280px;
+      }
+      .img_sizing {
+        width: 84px;
+        height: 70px;
+      }
+      .linkedIn_text {
+        font-size: 15px;
+      }
+      .linkedIn_ad {
+        position: sticky;
+        top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 48px;
+      }
+      .positioning {
+        position: sticky;
+        top: 10px;
+      }
+      .hdr_img {
+        border-radius: 34px;
+        width: 11%;
+      }
+      .hdr_input {
+        width: 80%;
+        padding: 11px;
+        border-radius: 28px;
+      }
+      .header_bar {
+        margin-top: 45px;
+        background-color: #fafafa;
+        padding: 12px;
+        width: 93%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 8px;
+      }
+      .header_bar_top {
+        display: flex;
+        gap: 15px;
+      }
+      .header_bar_down {
+        display: flex;
+        gap: 60px;
+        padding-left: 22px;
+      }
+      .icon_pack {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .icon-sizing {
+        width: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="twocontents_wrp">
+        <div class="search_icon">
+          <img class="logo" src="../Icons/linkedin-removebg-preview.png" />
+          <div class="search_input_icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="Searchbox" type="text" placeholder="search" />
+          </div>
+        </div>
+        <div class="allicons">
+          <div class="iconsizing">
+            <i class="fa-solid fa-house"></i>
+            <span class="icontextlight">Home</span>
+          </div>
+          <div class="iconsizing">
+            <i class="fa-solid fa-user-group"></i>
+            <span class="icontextlight">My network</span>
+          </div>
+          <div class="iconsizing">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="icontextlight">Jobs</span>
+          </div>
+          <div class="iconsizing">
+            <i class="fa-solid fa-message"></i>
+            <span class="icontextlight">Messages</span>
+          </div>
+          <div class="iconsizing">
+            <i class="fa-regular fa-bell"></i>
+            <span class="icontextlight">Notifications</span>
+          </div>
+          <div class="iconsizing">
+            <img
+              src="https://media.licdn.com/dms/image/D5603AQFdIN_knlZFHA/profile-displayphoto-shrink_100_100/0/1672151941452?e=1694044800&v=beta&t=MEyRNEbKj2DgldHyDaZFSkef2RA-yrzWFaEEAvcAjRk"
+              alt=""
+              class="imgprofile"
+            />
+            <span class="icontextlight">Profile</span>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="iconcontent">
+        <div class="icon_texting">
+          <i class="fa-solid fa-list-ul"></i>
+          <span>For bussiness</span>
+        </div>
+        <div>
+          <span class="text"
+            >Get hired fast
+            <br />
+            Try primium for free</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="main_bar">
+      <div class="sidebarleft">
+        <div class="profilebar">
+          <div class="profileinfo">
+            <div class="profile_color"></div>
+            <div class="profile_background">
+              <img
+                class="imagedec"
+                src="https://media.licdn.com/dms/image/D5603AQFdIN_knlZFHA/profile-displayphoto-shrink_100_100/0/1672151941452?e=1693440000&v=beta&t=9TDJtv2ICQT9b8SiqfW_jT803IxSDIqYoG9x-RtPu24"
+              />
+            </div>
+            <div class="profileText">
+              <span class="name">Gokul Shanmugam</span>
+              <span class="designation"
+                >SD at Aspire Systems |JAVA Developer |React Developer</span
+              >
+            </div>
+          </div>
+          <div class="Analytics">
+            <span class="AnalyticsText">Analytics & tools</span>
+            <br />
+            <span class="viewsText">6 profile views</span>
+          </div>
+
+          <div class="ExclusiveTools">
+            <span class="ExclusiveToolsText"
+              >Access exclusive Tools & insights</span
+            >
+            <br />
+            <span class="Trypremium">Get hired free.Try premium for free</span>
+          </div>
+
+          <div class="Myitems">
+            <i class="fa-solid fa-bookmark"></i>
+            <span class="myItemsText">My Items</span>
+          </div>
+        </div>
+
+        <div class="recentbar">
+          <div class="recent">
+            <span class="recenttext">Recent</span>
+          </div>
+
+          <div class="cloudcomputing">
+            <i class="fa-solid fa-user-group"></i>
+            <span class="cloudtext">Cloud Computing</span>
+          </div>
+
+          <div class="groups">
+            <span class="grouptext">Groups</span>
+          </div>
+
+          <div class="cloudcomputing">
+            <i class="fa-solid fa-user-group"></i>
+            <span class="cloudtext">Cloud Computing</span>
+          </div>
+
+          <div class="seeall">
+            <span class="seeall_text">See all</span>
+          </div>
+
+          <div class="eventfollow">
+            <div class="events">
+              <span class="event_text">Events</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <div class="followed">
+              <span class="follow_text">Followed Hashtags</span>
+            </div>
+
+            <div class="discover">
+              <span class="discover_text">Discover more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="center_text">
+        <div class="header_bar">
+          <div class="header_bar_top">
+            <img
+              class="hdr_img"
+              src="https://media.licdn.com/dms/image/D5603AQFdIN_knlZFHA/profile-displayphoto-shrink_100_100/0/1672151941452?e=1694044800&v=beta&t=MEyRNEbKj2DgldHyDaZFSkef2RA-yrzWFaEEAvcAjRk"
+            />
+            <input class="hdr_input" type="text" placeholder="Start a post" />
+          </div>
+          <div class="header_bar_down">
+            <div class="icon_pack">
+              <img class="icon-sizing" src="../Icons/icons8-gallery-64.png" />
+              <span>Photo</span>
+            </div>
+            <div class="icon_pack">
+              <img class="icon-sizing" src="../Icons/icons8-youtube-50.png" />
+              <span>Video</span>
+            </div>
+            <div class="icon_pack">
+              <img
+                src="../Icons/icons8-event-16.png"
+                alt=""
+                class="icon-sizing"
+              />
+              <span>Event</span>
+            </div>
+            <div class="icon_pack">
+              <img
+                src="../Icons/icons8-write-48.png"
+                alt=""
+                class="icon-sizing"
+              />
+              <span>Write article</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar_right">
+        <div class="Newsbar">
+          <div class="Linkedin_news">
+            <span class="news_text">LinkedIn News</span>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+          <div class="news_list">
+            <ul class="list_items">
+              <li class="list_text">
+                <span class="first_list"
+                  >Top trends in AI, finance, and retail</span
+                >
+                <div class="first_list_2">Top news .1574 readers</div>
+              </li>
+              <li class="list_text">
+                <span class="first_list">What makes an ad work?</span>
+                <br />
+                <span class="first_list_2">Top news .1574 readers</span>
+              </li>
+              <li class="list_text">
+                <span class="first_list"> HR leaders talk Pride</span>
+                <br />
+                <span class="first_list_2">Top news .1875 readers</span>
+              </li>
+              <li class="list_text">
+                <span class="first_list">Cyber insurance costs soare</span>
+                <br />
+                <span class="first_list_2">Top news .140 readers</span>
+              </li>
+              <li class="list_text">
+                <span class="first_list"
+                  >Tech top priority for India-US ties</span
+                >
+                <br />
+                <span class="first_list_2">Top news .1430 readers</span>
+              </li>
+            </ul>
+          </div>
+          <div class="showmore">
+            <span class="showmore_text">Show more</span>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+        </div>
+        <div class="positioning">
+          <div class="ad_bar">
+            <img
+              class="img_ad"
+              src="https://media.licdn.com/media/AAYQAgTPAAgAAQAAAAAAADVuOvKzTF-3RD6j-qFPqhubBQ.png"
+            />
+          </div>
+
+          <div class="optionbar">
+            <ul class="options_list">
+              <li class="options"><span>About</span></li>
+              <li class="options"><span>Accessibility</span></li>
+              <li class="options"><span>Help Center</span></li>
+              <li class="options">
+                <span>Privacy & Terms</span>
+                <i class="fa-solid fa-caret-down"></i>
+              </li>
+              <li class="options"><span>Ad Choices</span></li>
+              <li class="options"><span>Advertising</span></li>
+              <li class="options">
+                <span>Business Services</span
+                ><i class="fa-solid fa-caret-down"></i>
+              </li>
+              <li class="options"><span>Get the LinkedIn app</span></li>
+              <li class="options"><span>More</span></li>
+            </ul>
+          </div>
+
+          <div class="linkedIn_ad">
+            <img class="img_sizing" src="../Icons/linkedin_full.png" />
+            <span class="linkedIn_text">LinkedIn Corporation © 2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
